@@ -72,14 +72,19 @@ function html() {
 }
 
 function images() {
-  return src('app/images/**/*', { since: lastRun(images) })
+  return src('app/img/**/*', { since: lastRun(images) })
     .pipe($.imagemin())
-    .pipe(dest('dist/images'));
+    .pipe(dest('dist/img'));
 };
 
 function fonts() {
   return src('app/fonts/**/*.{eot,svg,ttf,woff,woff2}')
     .pipe($.if(!isProd, dest('.tmp/fonts'), dest('dist/fonts')));
+};
+
+function fontawesome() {
+  return src('app/font-awesome/**/*.{eot,svg,ttf,woff,woff2,css}')
+    .pipe($.if(!isProd, dest('.tmp/font-awesome'), dest('dist/font-awesome')));
 };
 
 function extras() {
@@ -119,6 +124,7 @@ const build = series(
     series(parallel(styles, scripts), html),
     images,
     fonts,
+    fontawesome,
     extras
   ),
   measureSize
@@ -144,7 +150,7 @@ function startAppServer() {
 
   watch([
     'app/*.html',
-    'app/images/**/*',
+    'app/img/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', server.reload);
 
@@ -161,13 +167,13 @@ function startTestServer() {
     server: {
       baseDir: 'test',
       routes: {
-        '/scripts': '.tmp/scripts',
+        '/js': '.tmp/js',
         '/node_modules': 'node_modules'
       }
     }
   });
 
-  watch('app/scripts/**/*.js', scripts);
+  watch('app/js/**/*.js', scripts);
   watch(['test/spec/**/*.js', 'test/index.html']).on('change', server.reload);
   watch('test/spec/**/*.js', lintTest);
 }
