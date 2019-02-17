@@ -174,6 +174,7 @@ function startTestServer() {
   });
 
   watch('app/js/**/*.js', scripts);
+  watch('app/css/**/*.css', styles);
   watch(['test/spec/**/*.js', 'test/index.html']).on('change', server.reload);
   watch('test/spec/**/*.js', lintTest);
 }
