@@ -14,6 +14,7 @@
     <!-- build:css styles/main.css -->
       <!-- Bootstrap Core CSS -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="scripts/fancybox/jquery.fancybox.css" rel="stylesheet">
       <!-- Custom CSS -->
       <link href="css/landing-page.css" rel="stylesheet">
     <!-- endbuild -->
@@ -53,37 +54,21 @@
                 交通 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="./jiaotong.html#feiji">飞机</a></li>
-                <li><a href="./jiaotong.html#dongche">动车</a></li>
-                <li><a href="./jiaotong.html#gaotie">高铁</a></li>
-                <li><a href="./jiaotong.html#ditie">地铁</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
-                  role="button" aria-haspopup="true" aria-expanded="false">
-                交通与美食 <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="./meishi.html#ditie">地铁美食篇</a></li>
-                <li><a href="./meishi.html#gaotie">高铁美食篇</a></li>
-                <li><a href="./meishi.html#feiji">飞机美食篇</a></li>
-                <li><a href="./meishi.html#lieche">绿皮特快列车美食篇</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
-                  role="button" aria-haspopup="true" aria-expanded="false">
-                模型 <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="./moxing.html#feiji">飞机</a></li>
-                <li><a href="./moxing.html#ditie">地铁</a></li>
-                <li><a href="./moxing.html#qiche">汽车</a></li>
+                <li><a href="./jiaotong-feiji.html">飞机篇</a></li>
+                <li><a href="./jiaotong-dongche.html">动车篇</a></li>
+                <li><a href="./jiaotong-gaotie.html">高铁篇</a></li>
+                <li><a href="./jiaotong-huoche.html">绿皮火车篇</a></li>
+                <li><a href="./jiaotong-shuangceng.html">双层火车篇</a></li>
               </ul>
             </li>
             <li>
-              <a href="./lvxing.html">旅行线路</a>
+              <a href="./meishi.html">美食</a>
+            </li>
+            <li>
+              <a href="./bowuguan.html">博物馆之旅</a>
+            </li>
+            <li>
+              <a href="./moxing.html">模型</a>
             </li>
           </ul>
         </div>
@@ -110,7 +95,6 @@
     <!-- /.intro-header -->
 
     <!-- Page Content -->
-
     <div class="content-section-b">
       <div class="container">
         <div class="row">
@@ -149,13 +133,15 @@
               中华人民都祝福这条丝绸之路的腾飞。
               <br>
               <br>
-
               此时花团锦簇的丝绸从船上顺滑而下，
               <br>
               海风拂过绸缎，
               <br>
               绸浪连绵不断的涌向我们的中国。
             </p>
+          </div>
+          <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+            <img class="img-responsive" src="img/poem.jpg" alt="">
           </div>
         </div>
       </div>
@@ -176,7 +162,7 @@
             <p class="lead">
               中国交通的发展日新月异，为我们的出行提供了更多的选择和便利性
               <br>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" style="font-size: 18px">
                 <li>
                   <a href="./jiaotong-feiji.html">飞机篇</a>
                 </li>
@@ -196,7 +182,7 @@
             </p>
           </div>
           <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-            <img class="img-responsive" src="img/KTT-2.jpg" alt="">
+            <img class="img-responsive" src="img/jiaotong/KTT-2.jpg" alt="">
           </div>
         </div>
       </div>
@@ -215,11 +201,34 @@
               <a href="./meishi.html">美食</a>
             </h2>
             <p class="lead">
-              美食介绍
+              旅途中的各式美食
             </p>
           </div>
           <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-            <img class="img-responsive" src="img/dog.png" alt="">
+            <img class="img-responsive" src="img/meishi/shanghai-2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+
+    <a name="bowuguan"></a>
+    <div class="content-section-a">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 col-sm-6">
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <h2 class="section-heading">
+              <a href="./bowuguan.html">博物馆之旅</a>
+            </h2>
+            <p class="lead">
+              博物馆是征集、典藏、陈列和研究代表自然和人类文化遗产的实物的场所
+            </p>
+          </div>
+          <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+            <img class="img-responsive" src="img/bowuguan/nonggeng-1.jpg" alt="">
           </div>
         </div>
       </div>
@@ -228,29 +237,6 @@
     <!-- /.content-section-b -->
 
     <a name="moxing"></a>
-    <div class="content-section-a">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-sm-6">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">
-              <a href="./moxing.html">模型</a>
-            </h2>
-            <p class="lead">
-              模型相关内容的介绍文字
-            </p>
-          </div>
-          <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-            <img class="img-responsive" src="img/ipad.png" alt="">
-          </div>
-        </div>
-      </div>
-      <!-- /.container -->
-    </div>
-    <!-- /.content-section-a -->
-
-    <a name="lvxing"></a>
     <div class="content-section-b">
       <div class="container">
         <div class="row">
@@ -258,25 +244,26 @@
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
             <h2 class="section-heading">
-              <a href="./lvxing.html">旅行</a>
+              <a href="./moxing.html">模型</a>
             </h2>
             <p class="lead">
-              旅行介绍
+              打开我的想象世界
             </p>
           </div>
           <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-            <img class="img-responsive" src="img/dog.png" alt="">
+            <img class="img-responsive" src="img/moxing/feiji-1.jpg" alt="">
           </div>
         </div>
       </div>
       <!-- /.container -->
     </div>
-    <!-- /.content-section-b -->
+    <!-- /.content-section-a -->
 
 
     <!-- build:js scripts/vendor.js -->	
       <!-- jQuery -->
       <script src="scripts/jquery.js"></script>
+      <script src="scripts/fancybox/jquery.fancybox.js"></script>
       <!-- Bootstrap Core JavaScript -->
       <script src="scripts/bootstrap.min.js"></script>
     <!-- endbuild -->	
