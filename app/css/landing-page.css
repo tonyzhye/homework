@@ -168,3 +168,11 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+.fixed-bottom {
+    padding-top: 20px;
+    padding-bottom: 45px;
+    height: 35px;
+    bottom: 0;
+    width: 100%;
+}
