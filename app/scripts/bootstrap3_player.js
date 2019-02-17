@@ -396,7 +396,7 @@
 
         fillPlayerBox();
         $(song).on('error', function () {
-            console.log("Error encountered after fillPlayerBox");
+            console.log('Error encountered after fillPlayerBox');
             load_error();
         });
         return player_box;
